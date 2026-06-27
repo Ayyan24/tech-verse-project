@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tech Verse</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-slate-50 flex flex-col min-h-screen">
+    <!-- Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Container -->
+    <main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl w-full surface-panel overflow-hidden grid grid-cols-1 md:grid-cols-2">
+            <!-- Left Side: Illustration / Promo -->
+            <div class="hidden md:flex text-white p-12 flex-col justify-between relative overflow-hidden" style="background: linear-gradient(160deg, #0b1627 0%, #132238 52%, #1f4b7a 100%);">
+                <!-- Decorative background elements -->
+                <div class="absolute -top-16 -left-16 w-48 h-48 bg-teal-400 rounded-full blur-3xl opacity-20"></div>
+                <div class="absolute -bottom-24 -right-16 w-64 h-64 bg-sky-500 rounded-full blur-3xl opacity-30"></div>
+
+                <div class="z-10">
+                    <a href="index.html" class="flex items-center gap-2 group mb-12">
+                        <div class="brand-btn-accent p-2 rounded-xl text-white">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <span class="font-extrabold text-xl tracking-tight text-white">Tech<span style="color:#0ea5e9;">Verse</span></span>
+                    </a>
+                    <h2 class="text-3xl font-extrabold leading-tight mb-4">Welcome Back to the Tech Hub</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Log in to access your personal dashboard, track shipments, update your shop listing, or buy high-grade tech hardware.
+                    </p>
+                </div>
+                <div class="z-10 mt-8">
+                    <div class="flex items-center gap-3 bg-white/10 p-4 rounded-2xl border border-white/15 backdrop-blur">
+                        <i class="fas fa-shield-alt text-teal-300 text-2xl"></i>
+                        <div class="text-xs">
+                            <p class="font-semibold text-white">100% Secured Payments</p>
+                            <p class="text-slate-400">Your transactions are safe with SSL encryption.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <div class="p-8 sm:p-12 flex flex-col justify-center">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-slate-800">Sign In</h2>
+                    <p class="text-slate-500 text-sm mt-1">Enter your email or admin ID and password to sign in</p>
+                </div>
+
+                <form id="login-form" class="space-y-5">
+                    <div>
+                        <label for="email" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Email Or Admin ID</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                                <i class="far fa-envelope"></i>
+                            </span>
+                            <input id="email" type="text" required placeholder="your@email.com" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 text-sm focus:outline-none focus:border-teal-500 focus:bg-white transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label for="password" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">Password</label>
+                            <a href="#" class="text-xs font-semibold text-sky-800 hover:text-teal-600 hover:underline">Forgot Password?</a>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <input id="password" type="password" required placeholder="••••••••" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 text-sm focus:outline-none focus:border-teal-500 focus:bg-white transition-all">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 brand-btn-primary text-white font-bold rounded-2xl transition-all">
+                        Sign In
+                    </button>
+                </form>
+
+                <p class="text-center text-sm text-slate-500 mt-8">
+                    Don't have an account? 
+                    <a href="signup.html" class="font-bold text-sky-800 hover:text-teal-600 hover:underline">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <!-- Firebase SDK (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/firebase-db.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
