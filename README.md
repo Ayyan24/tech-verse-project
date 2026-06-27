@@ -249,3 +249,16 @@ This project is developed for educational purposes as a college semester project
 # ⭐ Support
 
 If you found this project useful, consider giving it a ⭐ on GitHub.
+
+## 🌐 Live Demo
+
+**Website:** [Tech Verse - Pakistan's Premium IT Store](https://tech-verse-project.vercel.app/)
+
+> **Note:** The live demo may not include all planned features if the project is still under development.
+
+---
+
+## 📂 Source Code
+
+**GitHub Repository:** https://github.com/Ayyan24/TECH-VERSE-1
+
